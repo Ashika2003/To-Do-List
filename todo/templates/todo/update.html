@@ -1,0 +1,27 @@
+{% extends 'todo/base.html' %}
+{% load static %}
+{% block content %} 
+
+
+    <div class="col-lg-5 text-white p-4 mx-auto bg-dark ">
+        <div class="alert  alert-danger">
+           <h2>ADD A TASK</h2>
+        </div>
+        <div class=" shadow p-12 mx-auto">
+        <form action="" method="POST">
+            {% csrf_token %}
+    {% for fm in forms %}
+    <p>{{fm.label}}
+        
+    {{fm}}
+    </p>
+    <br>
+    {% endfor %}    
+            <input  class="btn btn-success" type="submit" value="SUBMIT">
+        </form>
+    </div>
+    </div>
+
+
+
+{% endblock content %}
